@@ -7,13 +7,13 @@ arm_mm: mm.c
 	$(ARM_CC) -o arm_mm mm.c
 
 arm_mm_vec: mm.c
-	$(ARM_CC) --save-temps -o arm_mm_vec mm.c -DENABLE_VEC
+	$(ARM_CC) -o arm_mm_vec mm.c -DENABLE_VEC
 
 arm_mm_omp: mm.c
-	$(ARM_CC) --save-temps -o arm_mm_omp mm.c -fopenmp
+	$(ARM_CC) -o arm_mm_omp mm.c -fopenmp
 
 arm_mm_vec_omp: mm.c
-	$(ARM_CC) --save-temps -o arm_mm_vec_omp mm.c -DENABLE_VEC -fopenmp
+	$(ARM_CC) -o arm_mm_vec_omp mm.c -DENABLE_VEC -fopenmp
 
 mm: mm.c
 	$(CC) -o mm mm.c
