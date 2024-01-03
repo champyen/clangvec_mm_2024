@@ -34,4 +34,4 @@ mm_vec_omp: mm.c
 	$(CC) -mavx512f -o mm_vec_omp mm.c -DENABLE_VEC -fopenmp
 
 clean:
-	rm -f mm mm_vec_* mm_omp mm_vec_omp arm_mm*
+	rm -f mm mm_vec_* mm_omp mm_vec_omp arm_mm* mm.bc mm.i mm.o mm.s
